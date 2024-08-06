@@ -22,7 +22,7 @@ import {
         dispatch(AddUserRequest());
 
         const {data} = await axios.put(
-            "http://localhost:4000/pokemon/adduser",
+            "https://react-task-bngi.onrender.com/pokemon/adduser",
             {owner,name,ability,positionX,positionY,speed,direction},
             {
                 headers:{
@@ -42,7 +42,7 @@ import {
 export const fetchAllUsers = ()=>async (dispatch)=>{
     try {
         dispatch(GetUserRequest())
-        const {data} = await axios.get("http://localhost:4000/pokemon/fetchallusers");
+        const {data} = await axios.get("https://react-task-bngi.onrender.com/pokemon/fetchallusers");
 
         dispatch(GetUserSuccess(data.users))
 
@@ -55,7 +55,7 @@ export const addPokemon = (id,name,ability)=>async (dispatch)=>{
     try {
         dispatch(AddPokemonRequest())
 
-        const {data} = await axios.put("http://localhost:4000/pokemon/addpokemon",
+        const {data} = await axios.put("https://react-task-bngi.onrender.com/pokemon/addpokemon",
             {id,name,ability},
             {
                     headers:{
@@ -74,7 +74,7 @@ export const deleteUser = (id)=>async (dispatch)=>{
     try {
         dispatch(DeleteUserRequest())
 
-        const {data} = await axios.delete("http://localhost:4000/pokemon/deleteuser",
+        const {data} = await axios.delete("https://react-task-bngi.onrender.com/pokemon/deleteuser",
             {data:{id}},
             {
                 headers:{
@@ -94,7 +94,7 @@ export const deleteAllUsers = ()=>async (dispatch)=>{
     try {
         dispatch(DeleteAllUsersRequest())
 
-        const {data} = await axios.delete("http://localhost:4000/pokemon/deleteallusers")
+        const {data} = await axios.delete("https://react-task-bngi.onrender.com/pokemon/deleteallusers")
 
         dispatch(DeleteAllUsersSuccess(data.message))
 
