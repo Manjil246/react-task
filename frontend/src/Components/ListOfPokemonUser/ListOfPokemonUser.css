@@ -1,0 +1,16 @@
+table,tr,th,td{
+    border:2px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+.fa{
+    cursor: pointer;
+}
+.fa:hover{
+    color: red;
+}
+
+.listDiv>*{
+    margin: 20px;
+}

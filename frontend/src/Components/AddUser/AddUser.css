@@ -1,0 +1,17 @@
+form{
+    display: flex;
+    margin: auto;
+    width: 70%;
+}
+
+.input1>div{
+    margin: 17px;
+    font-size: 20px;
+}
+
+.input2>*{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+

@@ -1,0 +1,37 @@
+.navDiv{
+    background-color: blue;
+}
+
+nav{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+nav>img{
+    width: 50px;
+    background-color: blue;
+    margin-right: 20px;
+}
+
+nav>ul{
+    display: flex;
+    align-items: center;
+}
+
+nav>ul>li{
+    list-style: none;
+}
+
+nav>ul>li>a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 15px 20px;
+    
+}
+
+nav>ul>li>a:hover{
+    background-color: rgb(14, 62, 105);
+}

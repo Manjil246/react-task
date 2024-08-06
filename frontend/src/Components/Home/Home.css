@@ -1,0 +1,29 @@
+.pokemonContainer{
+    height: 300px;
+    width: 500px;
+    background-color: rgb(127, 215, 227);
+    margin: auto;
+    border: 2px solid blue;
+}
+
+.pokemon{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: rgb(192, 12, 162);
+    position:relative;
+}
+
+.homeDiv{
+    margin: 20px;
+}
+
+.homeDiv>*{
+    margin: 10px;
+}
+
+
+
+
+
+  
