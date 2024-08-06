@@ -5,14 +5,14 @@ import "./ListOfPokemonUser.css"
 import {Link} from "react-router-dom"
 import { ToastContainer,toast } from 'react-toastify'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash, faEdit, faAdd } from '@fortawesome/free-solid-svg-icons'
+import { faTrash, faAdd } from '@fortawesome/free-solid-svg-icons'
 import { ClearError, ClearMessage } from '../../Reducers/PokemonUser'
 
 
 const ListOfPokemonUser = () => {
 
     const dispatch = useDispatch()
-    const {users,error,message} = useSelector(state=>state.user)
+    const {users,error,message,loading} = useSelector(state=>state.user)
 
     useEffect(() => {
         dispatch(fetchAllUsers());
@@ -28,9 +28,6 @@ const ListOfPokemonUser = () => {
       await dispatch(fetchAllUsers());
     }
 
-    const editHandler = ()=>{
-
-    }
 
     useEffect(() => {
       if (error) {
@@ -68,7 +65,7 @@ const ListOfPokemonUser = () => {
             <td>{user.pokemons[0].ability}</td>
             <td>{user.pokemons.length}</td>
             <td><Link to={`/addpokemon/${user._id}/${user.owner}`}><FontAwesomeIcon className='fa' icon={faAdd}/></Link></td>
-            <td><button onClick={()=>deleteHandler(user._id)}><FontAwesomeIcon className='fa' icon={faTrash}/></button></td>
+            <td><button onClick={()=>deleteHandler(user._id)} disabled={loading}><FontAwesomeIcon className='fa' icon={faTrash}/></button></td>
         </tr>
         )
     }

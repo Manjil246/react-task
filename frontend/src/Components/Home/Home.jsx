@@ -2,10 +2,11 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchAllUsers } from '../../Actions/PokemonUser'
 import "./Home.css"
+import Loading from '../Loading/Loading'
 
 const Home = () => {
 
-  const {users} = useSelector(state=>state.user)
+  const {users,loading} = useSelector(state=>state.user)
   const dispatch = useDispatch()
   const [pokemonOwner, setPokemonOwner] = useState({})
   const [motion,setMotion] = useState(false)
@@ -91,6 +92,7 @@ const Home = () => {
   
 
   return (
+    loading?<Loading/>:
     <div className='homeDiv'>
       <h1>List of Pokemon Owner</h1>
       <select onChange={changeOwnerHandler}>
@@ -127,7 +129,6 @@ const Home = () => {
           className='pokemon'>{pokemon.name}</div>
         ))}
       </div>
-      
     </div>
   )
 }

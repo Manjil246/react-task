@@ -4,6 +4,7 @@ import { addUser } from "../../Actions/PokemonUser.js";
 import { ToastContainer, toast } from "react-toastify";
 import { ClearError, ClearMessage } from "../../Reducers/PokemonUser.js";
 import "./AddUser.css"
+import Loading from "../Loading/Loading.jsx";
 
 const AddUser = () => {
   const [pokemons, setPokemons] = useState([]);
@@ -19,7 +20,7 @@ const AddUser = () => {
   const [direction, setDirection] = useState("right");
 
   const dispatch = useDispatch();
-  const { message, error } = useSelector((state) => state.user);
+  const { message, error,loading } = useSelector((state) => state.user);
 
   const changeHandlerName = (e) => {
     setPokemonLink(
@@ -84,7 +85,8 @@ const AddUser = () => {
   };
 
   return (
-    <div className="addUserDiv">
+    <div>
+    {loading?<Loading/>:<div className="addUserDiv">
       <h1>Add Pokemon User</h1>
       <form onSubmit={submitHandler}>
         <div className="input1">
@@ -164,11 +166,12 @@ const AddUser = () => {
                   <option value="bottom">Bottom</option>
                   <option value="left">Left</option>
                 </select>
-                <input type="submit" value="Add USer" />
+                <input type="submit" value="Add USer" disabled={loading}/>
         </div>
 
         
       </form>
+    </div>}
       <ToastContainer />
     </div>
   );

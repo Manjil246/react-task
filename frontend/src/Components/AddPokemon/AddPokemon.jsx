@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom'
 import {ToastContainer, toast} from "react-toastify"
 import { ClearError, ClearMessage } from '../../Reducers/PokemonUser'
 import "./AddPokemon.css"
+import Loading from '../Loading/Loading'
 
 const AddPokemon = () => {
 
@@ -15,7 +16,7 @@ const AddPokemon = () => {
   const [pokemonName, setPokemonName] = useState("");
   const [pokemonAbilityName, setPokemonAbilityName] = useState("");
   
-  const { message, error } = useSelector((state) => state.user);
+  const { message, error, loading} = useSelector((state) => state.user);
 
     const dispatch = useDispatch()
     const {id,name} = useParams()
@@ -74,7 +75,8 @@ const AddPokemon = () => {
       }
     
   return (
-    <div className='addPokemonDiv'>
+    <div>
+    {loading?<Loading/>:<div className='addPokemonDiv'>
         User: <input type="text" value={name} disabled/>
         <br/>
         Pokemon Name: <select onChange={changeHandlerName}>
@@ -95,7 +97,8 @@ const AddPokemon = () => {
             ))}
         </select>
         <br />
-        <button onClick={submitHandler}>Add</button>
+        <button onClick={submitHandler} disabled={loading}>Add</button>
+    </div>}
         <ToastContainer/>
     </div>
   )
