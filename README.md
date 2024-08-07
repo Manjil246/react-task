@@ -74,10 +74,10 @@ To set up the project locally, follow these steps:
 
 The project is deployed using the following services:
 
-- **Frontend**: Deployed on Netlify
-    - [Link Text](https://manjil.netlify.app/)
+- **Frontend**: Deployed on Netlif
+    - https://manjil.netlify.app/
 - **Backend**: Deployed on Render
-    - [Link Text](https://react-task-bngi.onrender.com)
+    - https://react-task-bngi.onrender.com
 - **Database**: Hosted on MongoDB Atlas
     
 ## Usage
