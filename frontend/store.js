@@ -3,7 +3,7 @@ import pokemonUserReducer from "./src/Reducers/PokemonUser"
 
 const store = configureStore({
     reducer:{
-        "user":pokemonUserReducer
+        "user":pokemonUserReducer,
     }
 })
 

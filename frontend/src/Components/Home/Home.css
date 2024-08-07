@@ -11,15 +11,15 @@
     width: 20px;
     border-radius: 50%;
     background-color: rgb(192, 12, 162);
-    position:relative;
+    position: relative;
 }
 
 .homeDiv{
-    margin: 20px;
+    margin: 10px 10px 0 10px;
 }
 
 .homeDiv>*{
-    margin: 10px;
+    margin-top: 15px;
 }
 
 

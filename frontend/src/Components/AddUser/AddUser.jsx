@@ -36,8 +36,7 @@ const AddUser = () => {
   useEffect(() => {
     const fetchPokemons = async () => {
       const response = await fetch(
-        "https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20"
-      );
+        "https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20");
       const data = await response.json();
       setPokemons(data.results);
       setPokemonLink(data.results[0].url);
@@ -85,7 +84,7 @@ const AddUser = () => {
   };
 
   return (
-    <div>
+    <div className="center">
     {loading?<Loading/>:<div className="addUserDiv">
       <h1>Add Pokemon User</h1>
       <form onSubmit={submitHandler}>

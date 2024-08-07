@@ -1,17 +1,19 @@
+.addUserDiv{
+    min-width: 50%;
+}
 form{
     display: flex;
     margin: auto;
-    width: 70%;
+    width: 100%;
 }
-
-.input1>div{
+.input1>*{
     margin: 17px;
     font-size: 20px;
 }
-
 .input2>*{
     display: flex;
     flex-direction: column;
     margin: 10px;
+    font-size: 20px;
 }
 

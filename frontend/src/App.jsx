@@ -12,6 +12,7 @@ function App() {
   return (
     <div >
       <Router>
+      <img className="pokemonImage" src="https://c4.wallpaperflare.com/wallpaper/269/160/905/pokemon-pikachu-pokeball-wallpaper-preview.jpg"/>
         <Navbar/>
         <div className='container'>
         <Routes>

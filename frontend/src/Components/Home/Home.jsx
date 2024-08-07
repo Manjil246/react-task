@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchAllUsers } from '../../Actions/PokemonUser'
 import "./Home.css"
 import Loading from '../Loading/Loading'
+import { ToastContainer,toast } from 'react-toastify'
 
 const Home = () => {
 
@@ -54,7 +55,6 @@ const Home = () => {
         if (currentStyle.left < 0 || currentStyle.left > 500 || currentStyle.top < 0 || currentStyle.top > 300) {
           setDisplay("none")
         } else {
-          console.log(currentStyle)
           if(pokemonOwner.direction==="right"){
             setStyle(previousStyle => ({
               ...previousStyle,
@@ -92,11 +92,12 @@ const Home = () => {
   
 
   return (
-    loading?<Loading/>:
+    <div className='center'>
+    {loading?<Loading/>:
     <div className='homeDiv'>
       <h1>List of Pokemon Owner</h1>
       <select onChange={changeOwnerHandler}>
-        {users && users.length>0 && users.map((user)=>(
+        {!(users && users.length>0)?<option value="">No Users yet</option> : users.map((user)=>(
           <option key={user._id} value={user._id}>{user.owner}</option>
         ))}
       </select>
@@ -129,6 +130,8 @@ const Home = () => {
           className='pokemon'>{pokemon.name}</div>
         ))}
       </div>
+    </div>}
+    <ToastContainer/>
     </div>
   )
 }

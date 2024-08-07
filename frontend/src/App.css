@@ -2,40 +2,50 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Comic Sans MS;
 }
+
+.pokemonImage{
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  opacity: 0.2;
+  z-index: -1;
+}
+
 .container{
   width: 80%;
   margin: auto;
-  padding: 30px;
+  padding: 30px 30px 0 30px;
   border-radius: 20px;
 }
 button,input[type="submit"]{
-  background-color: rgb(10, 68, 176);
+  background-color: rgb(179, 10, 10);
   padding: 5px 8px;
   border-radius: 10px;
   color: white;
   cursor: pointer;
-  box-shadow: 2px 2px 3px 3px rgb(105, 160, 222);
+  box-shadow: 2px 2px 3px 3px rgb(222, 105, 160);
+  margin: 0 10px;
 }
 
 button:hover,input[type="submit"]:hover{
-  background-color: rgb(2, 2, 78);
+  background-color: rgb(95, 4, 4);
 }
 
-
-select{
-  padding: 5px;
-  background-color: rgb(228, 95, 243);
-  border-radius: 5px;
-  color: white;
-}
 
 input[type="text"],input[type="number"],select{
   background-color: transparent;
   padding: 5px;
   outline: none;
-  border: 2px solid blue;
+  border: 2px solid rgb(255, 0, 119);
   border-radius: 5px;
   font-size: 15px;
   color: black;
+}
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
 }

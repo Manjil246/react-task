@@ -1,5 +1,5 @@
 .navDiv{
-    background-color: blue;
+    background-color: rgb(255, 0, 17);
 }
 
 nav{
@@ -10,8 +10,7 @@ nav{
 }
 
 nav>img{
-    width: 50px;
-    background-color: blue;
+    width: 75px;
     margin-right: 20px;
 }
 
@@ -33,5 +32,9 @@ nav>ul>li>a{
 }
 
 nav>ul>li>a:hover{
-    background-color: rgb(14, 62, 105);
+    background-color: rgb(97, 4, 17);
+}
+
+.active{
+    background-color: rgb(97, 4, 17);
 }
