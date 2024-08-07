@@ -37,7 +37,7 @@ This project is a full-stack application developed using the MERN stack (MongoDB
 
 To set up the project locally, follow these steps:
 
-1. **Download the repository as a ZIP file** from GitHub: [react-task](https://github.com/Manjil/react-task)
+1. **Download the repository as a ZIP file** from GitHub: [react-task](https://github.com/Manjil246/react-task)
 2. **Extract the ZIP file** to your local machine.
 
 ### Backend Setup
