@@ -74,7 +74,7 @@ To set up the project locally, follow these steps:
 
 The project is deployed using the following services:
 
-- **Frontend**: Deployed on Netlif
+- **Frontend**: Deployed on Netlify
     - https://manjil.netlify.app/
 - **Backend**: Deployed on Render
     - https://react-task-bngi.onrender.com
